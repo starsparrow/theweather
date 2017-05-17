@@ -1,6 +1,8 @@
 # theweather
 Command line tool for displaying weather at the provided address
 
+[Powered by Dark Sky](https://darksky.net/poweredby)
+
 ### Usage Examples:
 $ ./weather.py 10108
 
