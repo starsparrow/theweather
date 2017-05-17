@@ -8,6 +8,7 @@ import requests
 
 DARK_SKY_API_BASE_URL = 'https://api.darksky.net/forecast'
 DARK_SKY_API_KEY = 'xxxxx'
+ATTRIB = 'Powered by Dark Sky (https://darksky.net/poweredby)'
 GOOGLE_MAPS_API_BASE_URL = 'http://maps.googleapis.com/maps/api/geocode/json'
 
 
@@ -29,11 +30,13 @@ class Forecast:
         self.forecast_area = loc[1]
     
     def __str__(self):
-        return 'Current conditions for {}:\
+        return '\nCurrent conditions for {}:\
                 \nSummary:\t{}\
-                \nTemperature:\t{}'.format(self.forecast_area,
+                \nTemperature:\t{}\
+                \n\n{}'.format(self.forecast_area,
                                            self.current_summary,
-                                           self.current_temp)
+                                           self.current_temp,
+                                           ATTRIB)
 
 
 class Location:
